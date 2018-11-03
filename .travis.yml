@@ -23,18 +23,18 @@ before_script:
 script:
   - ./gradlew build
 
-#after_success:
-#  - ./gradlew javadocRelease
-#
-#deploy:
-#  # Fix broken deployment due to the below issue:
-#  # https://github.com/travis-ci/travis-ci/issues/9312
-#  edge:
-#    branch: v1.8.47
-#  provider: pages
-#  skip-cleanup: true
-#  github-token: $GITHUB_TOKEN
-#  keep-history: true
-#  local-dir: dynamic-motion/build/docs/javadoc/release
-#  on:
-#    branch: master
+after_success:
+  - ./gradlew javadocRelease
+
+deploy:
+  # Fix broken deployment due to the below issue:
+  # https://github.com/travis-ci/travis-ci/issues/9312
+  edge:
+    branch: v1.8.47
+  provider: pages
+  skip-cleanup: true
+  github-token: $GITHUB_TOKEN
+  keep-history: true
+  local-dir: dynamic-motion/build/docs/javadoc/release
+  on:
+    branch: master

@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.pranavpandey.android.dynamic.motion.sample;
+package com.pranavpandey.android.dynamic.motion.sample.widget;
 
 import android.content.Context;
 import android.graphics.PorterDuff;
@@ -44,12 +44,19 @@ public class DynamicImageView extends AppCompatImageView {
     }
 
     /**
+     * Returns the filter mode to be used to tint this view.
+     *
      * @return The filter mode to be used to tint this view.
      */
     public PorterDuff.Mode getFilterMode() {
         return PorterDuff.Mode.SRC_IN;
     }
 
+    /**
+     * Set color of this view according to the supplied values. It will be used to tint this
+     * view dynamically by using the custom attribute feature of the
+     * {@link androidx.constraintlayout.motion.widget.MotionLayout}.
+     */
     public void setColor(@ColorInt int color) {
         setColorFilter(color, getFilterMode());
     }
