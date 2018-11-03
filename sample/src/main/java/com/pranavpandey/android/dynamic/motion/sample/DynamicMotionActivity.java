@@ -22,7 +22,7 @@ import com.pranavpandey.android.dynamic.R;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-public class PlaygroundActivity extends AppCompatActivity {
+public class DynamicMotionActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

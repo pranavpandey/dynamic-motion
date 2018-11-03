@@ -9,6 +9,93 @@ A library to provide additional functionality for [MotionLayout](https://develop
 
 <img src="https://raw.githubusercontent.com/pranavpandey/dynamic-motion/master/graphics/dynamic-motion.gif" width="280" height="486">
 
+It has `DynamicMotionLayout` which has a built-in `ViewPager` to create parallax effects which will
+open a huge set of possibilities for the original `MotionLayout`.
+
+---
+
+## Contents
+
+- [Installation](https://github.com/pranavpandey/dynamic-motion#installation)
+- [Usage](https://github.com/pranavpandey/dynamic-motion#usage)
+    - [Replace](https://github.com/pranavpandey/dynamic-motion#replace)
+    - [Page count](https://github.com/pranavpandey/dynamic-motion#page-count)
+    - [Motion scene](https://github.com/pranavpandey/dynamic-motion#motion-scene)
+- [License](https://github.com/pranavpandey/dynamic-motion#license)
+
+---
+
+## Installation
+
+It can be installed by adding the following dependency to your `build.gradle` file:
+
+```groovy
+dependencies {
+    implementation 'com.pranavpandey.android:dynamic-motion:coming-soon'
+}
+```
+
+---
+
+## Usage
+
+It is divided into 3 simple steps and whole layout can be configured by just using the `xml` files.
+
+### Replace
+
+First, replace the original `MotionLayout` with `DynamicMotionLayout` in `xml` file.
+
+```xml
+<com.pranavpandey.android.dynamic.motion.widget.DynamicMotionLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    ...
+    >
+
+    ...
+</com.pranavpandey.android.dynamic.motion.widget.DynamicMotionLayout>
+```
+
+### Page count
+
+Set page count for `ViewPager` to divide the `transition` between different pages.
+
+```xml
+<com.pranavpandey.android.dynamic.motion.widget.DynamicMotionLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:adm_pageCount="4"
+    ...
+    >
+
+    ...
+</com.pranavpandey.android.dynamic.motion.widget.DynamicMotionLayout>
+```
+
+```java
+// At runtime
+dynamicMotionLayout.setPageCount(int, @Nullable ViewPager.OnPageChangeListener);
+```
+
+### Motion scene
+
+Add a motion scene and use `KeyFrameSet` and `KeyAttribute` to animate the views across different
+pages. Please check the [sample](https://github.com/pranavpandey/dynamic-motion/tree/master/sample)
+for a [demo scene](https://github.com/pranavpandey/dynamic-motion/blob/master/sample/src/main/res/xml/motion_scene.xml).
+
+```xml
+<com.pranavpandey.android.dynamic.motion.widget.DynamicMotionLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:layoutDescription="@xml/motion_scene"
+    app:adm_pageCount="4"
+    ...
+    >
+
+    ...
+</com.pranavpandey.android.dynamic.motion.widget.DynamicMotionLayout>
+```
+
 ---
 
 ## License

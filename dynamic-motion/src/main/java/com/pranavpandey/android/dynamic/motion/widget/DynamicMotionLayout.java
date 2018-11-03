@@ -34,7 +34,7 @@ import androidx.viewpager.widget.ViewPager;
 public class DynamicMotionLayout extends MotionLayout implements ViewPager.OnPageChangeListener {
 
     /**
-     * Constant for unknown page count.
+     * Constant for the unknown page count.
      */
     private static final int ADM_VALUE_UNKNOWN = -1;
 
