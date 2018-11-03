@@ -1,0 +1,86 @@
+/*
+ * Copyright 2017 Pranav Pandey
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+apply plugin: 'com.jfrog.bintray'
+
+version = mavenVersion
+
+// Android libraries
+if (project.hasProperty("android")) {
+    task sourcesJar(type: Jar) {
+        from android.sourceSets.main.java.srcDirs
+        classifier = 'sources'
+    }
+
+    task javadoc(type: Javadoc) {
+        source = android.sourceSets.main.java.srcDirs
+        classpath += configurations.compile
+        classpath += project.files(android.getBootClasspath().join(File.pathSeparator))
+
+        failOnError = false
+    }
+} else { // Java libraries
+    task sourcesJar(type: Jar, dependsOn: classes) {
+        classifier = 'sources'
+        from sourceSets.main.allSource
+    }
+}
+
+task javadocJar(type: Jar, dependsOn: javadoc) {
+    classifier = 'javadoc'
+    from javadoc.destinationDir
+}
+
+artifacts {
+    archives javadocJar
+    archives sourcesJar
+}
+
+// Bintray
+Properties properties = new Properties()
+properties.load(project.rootProject.file('local.properties').newDataInputStream())
+
+bintray {
+    user = properties.getProperty("bintray.user")
+    key = properties.getProperty("bintray.key")
+
+    configurations = ['archives']
+
+    pkg {
+        repo = mavenRepo
+        name = mavenArtifactId
+        desc = projectDesc
+        websiteUrl = siteUrl
+        vcsUrl = "${gitUrl}.git"
+        issueTrackerUrl = issueUrl
+        licenses = allLicenses
+        publish = true
+        publicDownloadNumbers = true
+
+        githubRepo = githubUrl
+
+        version {
+            name = mavenVersion
+            desc = versionDesc
+            released = new Date()
+
+            gpg {
+                sign = true
+                passphrase = properties.getProperty("bintray.passphrase")
+            }
+        }
+    }
+}

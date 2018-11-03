@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+	Copyright 2018 Pranav Pandey
+
+	Licensed under the Apache License, Version 2.0 (the "License");
+	you may not use this file except in compliance with the License.
+	You may obtain a copy of the License at
+
+	   http://www.apache.org/licenses/LICENSE-2.0
+
+	Unless required by applicable law or agreed to in writing, software
+	distributed under the License is distributed on an "AS IS" BASIS,
+	WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+	See the License for the specific language governing permissions and
+	limitations under the License.
+-->
+
+<vector
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportHeight="108"
+    android:viewportWidth="108"
+    android:autoMirrored="true">
+
+    <path
+        android:fillColor="@color/color_accent"
+        android:pathData="m59.36 42.19 -16.46 -12.38v48.67l16.46 -12.38l15.92 -11.95l-15.92 -11.95zm0 0 -16.46 -12.38v48.67l16.46 -12.38l15.92 -11.95l-15.92 -11.95zm0 0 -16.46 -12.38v48.67l16.46 -12.38l15.92 -11.95l-15.92 -11.95zm-11.06 -30.93v-10.92c-10.84 1.08 -20.72 5.41 -28.7 11.95l7.66 7.73c5.99 -4.65 13.16 -7.79 21.04 -8.76zm-28.65 16.39 -7.72 -7.68c-6.53 8 -10.84 17.9 -11.92 28.77h10.9c0.97 -7.9 4.1 -15.09 8.74 -21.09zm-8.74 31.91h-10.9c1.08 10.87 5.4 20.77 11.92 28.77l7.72 -7.73c-4.64 -5.95 -7.77 -13.14 -8.74 -21.04zm8.69 36.45c7.99 6.54 17.91 10.87 28.7 11.95v-10.92c-7.88 -0.97 -15.05 -4.11 -21.04 -8.76l-7.66 7.73zm88.05 -41.86c0 27.91 -21.15 50.94 -48.29 53.81v-10.92c21.15 -2.81 37.5 -20.98 37.5 -42.89c0 -21.9 -16.35 -40.07 -37.5 -42.89v-10.92c27.14 2.87 48.29 25.9 48.29 53.81z" />
+
+</vector>

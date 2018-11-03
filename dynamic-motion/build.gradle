@@ -1,0 +1,66 @@
+/*
+ * Copyright 2018 Pranav Pandey
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+apply plugin: 'com.android.library'
+
+android {
+    compileSdkVersion versions.compileSdk
+    buildToolsVersion versions.buildTools
+
+    defaultConfig {
+        minSdkVersion versions.minSdk
+        targetSdkVersion versions.targetSdk
+        versionCode mavenVersionCode
+        versionName mavenVersion
+
+        vectorDrawables.useSupportLibrary = true
+    }
+
+    sourceSets {
+        main.res.srcDirs = [
+                'src/main/res'
+        ]
+    }
+}
+
+dependencies {
+    api "androidx.constraintlayout:constraintlayout:${versions.constraintlayout}"
+}
+
+if (project.rootProject.file('local.properties').exists()) {
+    apply from: 'maven.gradle'
+    apply from: 'bintray.gradle'
+}
+
+project.afterEvaluate {
+    android.libraryVariants.all { variant ->
+        if (variant.name == 'release') {
+            task javadocRelease(type: Javadoc) {
+                description = "Generates javadocs"
+                failOnError = false
+                destinationDir = new File(destinationDir, variant.baseName)
+                source = files(variant.javaCompiler.source)
+                classpath = files(variant.javaCompiler.classpath.files) + files(android.bootClasspath)
+                options.windowTitle(referenceTitle)
+                options.docTitle(referenceTitle)
+                options.header(referenceTitle)
+                options.links('http://docs.oracle.com/javase/8/docs/api')
+                options.linksOffline('https://developer.android.com/reference', "${android.sdkDirectory}/docs/reference")
+                exclude '**/R.java', '**/BuildConfig.java'
+            }
+        }
+    }
+}
