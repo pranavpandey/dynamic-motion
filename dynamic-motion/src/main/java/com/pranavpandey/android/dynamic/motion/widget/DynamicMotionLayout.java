@@ -33,6 +33,9 @@ import androidx.viewpager.widget.ViewPager;
  */
 public class DynamicMotionLayout extends MotionLayout implements ViewPager.OnPageChangeListener {
 
+    /**
+     * Constant for unknown page count.
+     */
     private static final int ADM_VALUE_UNKNOWN = -1;
 
     /**
@@ -61,6 +64,11 @@ public class DynamicMotionLayout extends MotionLayout implements ViewPager.OnPag
         loadFromAttributes(attrs);
     }
 
+    /**
+     * Load values from the supplied attribute set.
+     *
+     * @param attrs The supplied attribute set to load the values.
+     */
     public void loadFromAttributes(@Nullable AttributeSet attrs) {
         TypedArray a = getContext().obtainStyledAttributes(attrs, R.styleable.DynamicMotion);
 
@@ -73,6 +81,9 @@ public class DynamicMotionLayout extends MotionLayout implements ViewPager.OnPag
         initialize();
     }
 
+    /**
+     * Initialize this view by setting the default values.
+     */
     public void initialize() {
         if (mPageCount > 0) {
             setPageCount(mPageCount, null);
@@ -121,7 +132,7 @@ public class DynamicMotionLayout extends MotionLayout implements ViewPager.OnPag
     /**
      * Get the page count for the view pager.
      *
-     * @return The page count for the view pager
+     * @return The page count for the view pager.
      */
     public int getPageCount() {
         return mPageCount;
