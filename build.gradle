@@ -52,7 +52,7 @@ task clean(type: Delete) {
 ext {
     projectName = 'dynamic-motion'
     projectDesc = 'A library to provide additional functionality for Android MotionLayout.'
-    versionDesc = 'A library to provide additional functionality for MotionLayout on' +
+    versionDesc = 'A library to provide additional functionality for MotionLayout on ' +
             'Android 18+ (JellyBean MR2 or above) devices.'
     referenceTitle = 'Dynamic Motion Reference'
 
@@ -65,9 +65,9 @@ ext {
     mavenGroup = 'com.pranavpandey.android'
     mavenArtifactId = 'dynamic-motion'
     mavenInceptionYear = 2018
-    mavenVersion = '0.1.0'
-    mavenVersionCode = 1
-    sampleVersionCode = 1
+    mavenVersion = '0.2.0'
+    mavenVersionCode = 2
+    sampleVersionCode = 2
 
     developerId = 'pranavpandey'
     developerName = 'Pranav Pandey'
