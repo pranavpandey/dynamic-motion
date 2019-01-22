@@ -17,7 +17,7 @@
 buildscript {
     ext.versions = [
             'compileSdk'      : 28,
-            'minSdk'          : 14,
+            'minSdk'          : 18,
             'targetSdk'       : 28,
             'buildTools'      : '28.0.3',
             'androidx'        : '1.0.2',
@@ -52,8 +52,8 @@ task clean(type: Delete) {
 ext {
     projectName = 'dynamic-motion'
     projectDesc = 'A library to provide additional functionality for Android MotionLayout.'
-    versionDesc = 'A library to provide additional functionality for MotionLayout ' +
-            'on Android 14+ (ICS or above) devices.'
+    versionDesc = 'A library to provide additional functionality for MotionLayout on' +
+            'Android 18+ (JellyBean MR2 or above) devices.'
     referenceTitle = 'Dynamic Motion Reference'
 
     siteUrl = 'https://github.com/pranavpandey/dynamic-motion'
@@ -67,6 +67,7 @@ ext {
     mavenInceptionYear = 2018
     mavenVersion = '0.1.0'
     mavenVersionCode = 1
+    sampleVersionCode = 1
 
     developerId = 'pranavpandey'
     developerName = 'Pranav Pandey'

@@ -5,7 +5,8 @@
 [![License](https://img.shields.io/badge/license-Apache%202-4EB1BA.svg?)](https://www.apache.org/licenses/LICENSE-2.0.html)
 [![Build Status](https://travis-ci.org/pranavpandey/dynamic-motion.svg?branch=master)](https://travis-ci.org/pranavpandey/dynamic-motion)
 
-A library to provide additional functionality for [MotionLayout](https://developer.android.com/reference/android/support/constraint/motion/MotionLayout) on Android 14+ (ICS or above) devices.
+A library to provide additional functionality for [MotionLayout](https://developer.android.com/reference/android/support/constraint/motion/MotionLayout) 
+on Android 18+ (JellyBean MR2 or above) devices.
 
 <img src="https://raw.githubusercontent.com/pranavpandey/dynamic-motion/master/graphics/dynamic-motion.gif" width="280" height="486">
 

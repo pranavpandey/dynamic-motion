@@ -53,9 +53,9 @@ public class DynamicImageView extends AppCompatImageView {
     }
 
     /**
-     * Set color of this view according to the supplied values. It will be used to tint this
-     * view dynamically by using the custom attribute feature of the
-     * {@link androidx.constraintlayout.motion.widget.MotionLayout}.
+     * Set color of this view according to the supplied values.
+     * <p><t will be used to tint this view dynamically by using the custom attribute feature
+     * of the {@link androidx.constraintlayout.motion.widget.MotionLayout}.
      */
     public void setColor(@ColorInt int color) {
         setColorFilter(color, getFilterMode());
