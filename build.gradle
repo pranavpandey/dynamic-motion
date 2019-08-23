@@ -1,5 +1,5 @@
 /*
- * Copyright 2018 Pranav Pandey
+ * Copyright 2019 Pranav Pandey
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -53,7 +53,7 @@ ext {
     projectName = 'dynamic-motion'
     projectDesc = 'A library to provide additional functionality for Android MotionLayout.'
     versionDesc = 'A library to provide additional functionality for MotionLayout on ' +
-            'Android 18+ (JellyBean MR2 or above) devices.'
+            'Android 4.3 (API 18) and above devices.'
     referenceTitle = 'Dynamic Motion Reference'
 
     siteUrl = 'https://github.com/pranavpandey/dynamic-motion'
