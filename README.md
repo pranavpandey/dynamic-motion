@@ -4,6 +4,7 @@
 
 [![License](https://img.shields.io/badge/license-Apache%202-4EB1BA.svg?)](https://www.apache.org/licenses/LICENSE-2.0.html)
 [![Build Status](https://travis-ci.org/pranavpandey/dynamic-motion.svg?branch=master)](https://travis-ci.org/pranavpandey/dynamic-motion)
+[![Download](https://api.bintray.com/packages/pranavpandey/android/dynamic-motion/images/download.svg)](https://bintray.com/pranavpandey/android/dynamic-motion/_latestVersion)
 
 A library to provide additional functionality for [MotionLayout](https://developer.android.com/reference/android/support/constraint/motion/MotionLayout) 
 on Android 4.3 (API 18) and above devices.
