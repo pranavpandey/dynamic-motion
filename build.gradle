@@ -65,9 +65,9 @@ ext {
     mavenGroup = 'com.pranavpandey.android'
     mavenArtifactId = 'dynamic-motion'
     mavenInceptionYear = 2018
-    mavenVersion = '0.2.0'
-    mavenVersionCode = 2
-    sampleVersionCode = 2
+    mavenVersion = '0.3.0'
+    mavenVersionCode = 3
+    sampleVersionCode = 3
 
     developerId = 'pranavpandey'
     developerName = 'Pranav Pandey'
