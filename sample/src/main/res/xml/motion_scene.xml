@@ -17,103 +17,103 @@
 
 <MotionScene
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:motion="http://schemas.android.com/apk/res-auto">
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <Transition
-        motion:constraintSetEnd="@+id/end"
-        motion:constraintSetStart="@+id/start">
+        app:constraintSetEnd="@+id/end"
+        app:constraintSetStart="@+id/start">
 
         <KeyFrameSet>
 
             <KeyAttribute
-                motion:framePosition="0"
-                motion:target="@+id/background">
+                app:framePosition="0"
+                app:motionTarget="@+id/background">
 
                 <CustomAttribute
-                    motion:attributeName="backgroundColor"
-                    motion:customColorValue="#3F51B5" />
+                    app:attributeName="backgroundColor"
+                    app:customColorValue="#3F51B5" />
 
             </KeyAttribute>
 
             <KeyAttribute
-                motion:framePosition="0"
                 android:scaleX="1"
                 android:scaleY="1"
                 android:rotation="0"
-                motion:target="@+id/image">
+                app:framePosition="0"
+                app:motionTarget="@+id/image">
 
                 <CustomAttribute
-                    motion:attributeName="color"
-                    motion:customColorValue="#BFC5E6" />
+                    app:attributeName="color"
+                    app:customColorValue="#BFC5E6" />
 
             </KeyAttribute>
 
             <KeyAttribute
-                motion:framePosition="33"
-                motion:target="@+id/background">
+                app:framePosition="33"
+                app:motionTarget="@+id/background">
 
                 <CustomAttribute
-                    motion:attributeName="backgroundColor"
-                    motion:customColorValue="#FFEB3B" />
+                    app:attributeName="backgroundColor"
+                    app:customColorValue="#FFEB3B" />
 
             </KeyAttribute>
 
             <KeyAttribute
-                motion:framePosition="33"
                 android:scaleX="1.3"
                 android:scaleY="1.3"
                 android:rotation="120"
-                motion:target="@+id/image">
+                app:framePosition="33"
+                app:motionTarget="@+id/image">
 
                 <CustomAttribute
-                    motion:attributeName="color"
-                    motion:customColorValue="#544D13" />
+                    app:attributeName="color"
+                    app:customColorValue="#544D13" />
 
             </KeyAttribute>
 
             <KeyAttribute
-                motion:framePosition="66"
-                motion:target="@+id/background">
+                app:framePosition="66"
+                app:motionTarget="@+id/background">
 
                 <CustomAttribute
-                    motion:attributeName="backgroundColor"
-                    motion:customColorValue="#E91E63" />
+                    app:attributeName="backgroundColor"
+                    app:customColorValue="#E91E63" />
 
             </KeyAttribute>
 
             <KeyAttribute
-                motion:framePosition="66"
                 android:scaleX="1.6"
                 android:scaleY="1.6"
                 android:rotation="240"
-                motion:target="@+id/image">
+                app:framePosition="66"
+                app:motionTarget="@+id/image">
 
                 <CustomAttribute
-                    motion:attributeName="color"
-                    motion:customColorValue="#F7B4CB" />
+                    app:attributeName="color"
+                    app:customColorValue="#F7B4CB" />
 
             </KeyAttribute>
 
             <KeyAttribute
-                motion:framePosition="100"
-                motion:target="@+id/background">
+                app:framePosition="100"
+                app:motionTarget="@+id/background">
 
                 <CustomAttribute
-                    motion:attributeName="backgroundColor"
-                    motion:customColorValue="#03A9F4" />
+                    app:attributeName="backgroundColor"
+                    app:customColorValue="#03A9F4" />
 
             </KeyAttribute>
 
             <KeyAttribute
-                motion:framePosition="100"
                 android:scaleX="1"
                 android:scaleY="1"
                 android:rotation="360"
-                motion:target="@+id/image">
+                app:framePosition="100"
+                app:motionTarget="@+id/image">
 
                 <CustomAttribute
-                    motion:attributeName="color"
-                    motion:customColorValue="#003750" />
+                    app:attributeName="color"
+                    app:customColorValue="#003750" />
 
             </KeyAttribute>
 
@@ -126,20 +126,20 @@
 
         <Constraint
             android:id="@+id/background"
-            motion:layout_constraintBottom_toBottomOf="parent"
-            motion:layout_constraintEnd_toEndOf="parent"
-            motion:layout_constraintStart_toStartOf="parent"
-            motion:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <Constraint
             android:id="@+id/image"
             android:layout_width="196dp"
             android:layout_height="196dp"
             android:padding="16dp"
-            motion:layout_constraintBottom_toBottomOf="parent"
-            motion:layout_constraintEnd_toEndOf="parent"
-            motion:layout_constraintStart_toStartOf="parent"
-            motion:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
     </ConstraintSet>
 
@@ -148,20 +148,20 @@
 
         <Constraint
             android:id="@+id/background"
-            motion:layout_constraintBottom_toBottomOf="parent"
-            motion:layout_constraintEnd_toEndOf="parent"
-            motion:layout_constraintStart_toStartOf="parent"
-            motion:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <Constraint
             android:id="@+id/image"
             android:layout_width="196dp"
             android:layout_height="196dp"
             android:padding="16dp"
-            motion:layout_constraintBottom_toBottomOf="parent"
-            motion:layout_constraintEnd_toEndOf="parent"
-            motion:layout_constraintStart_toStartOf="parent"
-            motion:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
     </ConstraintSet>
 

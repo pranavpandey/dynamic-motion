@@ -40,5 +40,5 @@ android {
 
 dependencies {
     implementation project(':dynamic-motion')
-    implementation "androidx.appcompat:appcompat:${versions.androidx}"
+    implementation "androidx.appcompat:appcompat:${versions.appcompat}"
 }
