@@ -31,7 +31,7 @@
 
                 <CustomAttribute
                     app:attributeName="backgroundColor"
-                    app:customColorValue="#3F51B5" />
+                    app:customColorValue="#FFEB3B" />
 
             </KeyAttribute>
 
@@ -44,7 +44,7 @@
 
                 <CustomAttribute
                     app:attributeName="color"
-                    app:customColorValue="#BFC5E6" />
+                    app:customColorValue="#544D13" />
 
             </KeyAttribute>
 
@@ -54,7 +54,7 @@
 
                 <CustomAttribute
                     app:attributeName="backgroundColor"
-                    app:customColorValue="#FFEB3B" />
+                    app:customColorValue="#3F51B5" />
 
             </KeyAttribute>
 
@@ -67,7 +67,7 @@
 
                 <CustomAttribute
                     app:attributeName="color"
-                    app:customColorValue="#544D13" />
+                    app:customColorValue="#BFC5E6" />
 
             </KeyAttribute>
 
