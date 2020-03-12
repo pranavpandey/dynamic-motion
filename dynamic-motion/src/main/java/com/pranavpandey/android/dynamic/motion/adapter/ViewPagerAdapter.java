@@ -16,59 +16,77 @@
 
 package com.pranavpandey.android.dynamic.motion.adapter;
 
-import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.LinearLayout;
+
+import androidx.annotation.NonNull;
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.pranavpandey.android.dynamic.motion.R;
 
-import java.util.ArrayList;
-import java.util.List;
-
-import androidx.annotation.NonNull;
-import androidx.viewpager.widget.PagerAdapter;
-
 /**
- * A PagerAdapter to show different views as pages.
+ * A {@link RecyclerView.Adapter} to show different views as pages.
  * <p>It will be used internally to add dummy views inside the view pager.
  */
-public class ViewPagerAdapter extends PagerAdapter {
+public class ViewPagerAdapter extends RecyclerView.Adapter<ViewPagerAdapter.ViewHolder> {
 
     /**
-     * A list to hold the views.
+     * Item count for this adapter.
      */
-    private List<View> mPages;
+    final int mPageCount;
 
-    public ViewPagerAdapter(@NonNull Context context, int pages) {
-        this.mPages = new ArrayList<>();
+    /**
+     * Constructor to initialize an object of this class.
+     *
+     * @param pageCount The item count for this adapter.
+     */
+    public ViewPagerAdapter(int pageCount) {
+        this.mPageCount = pageCount;
+    }
 
-        for (int i = 0; i < pages; i++) {
-            mPages.add(LayoutInflater.from(context).inflate(
-                    R.layout.adm_dummy_layout, new LinearLayout(context), false));
+    @Override
+    public @NonNull ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+        return new ViewHolder(LayoutInflater.from(parent.getContext())
+                .inflate(R.layout.adm_dummy_layout, parent, false));
+    }
+
+    @Override
+    public void onBindViewHolder(@NonNull ViewHolder holder, int position) { }
+
+    @Override
+    public int getItemCount() {
+        return mPageCount;
+    }
+
+    /**
+     * View holder to hold the dummy pages.
+     */
+    static class ViewHolder extends RecyclerView.ViewHolder {
+
+        /**
+         * Root view used by this view holder.
+         */
+        private final ViewGroup root;
+
+        /**
+         * Constructor to initialize views from the supplied root.
+         *
+         * @param view The view for this view holder.
+         */
+        ViewHolder(@NonNull View view) {
+            super(view);
+
+            root = view.findViewById(R.id.adm_dummy_layout);
         }
-    }
 
-    @Override
-    public @NonNull Object instantiateItem(@NonNull ViewGroup container, int position) {
-        View page = mPages.get(position);
-        container.addView(page);
-        return page;
-    }
-
-    @Override
-    public int getCount() {
-        return mPages.size();
-    }
-
-    @Override
-    public boolean isViewFromObject(@NonNull View view, @NonNull Object object) {
-        return view.equals(object);
-    }
-
-    @Override
-    public void destroyItem(@NonNull ViewGroup container, int position, @NonNull Object object) {
-        container.removeView((View) object);
+        /**
+         * Get the root view used by this view holder.
+         *
+         * @return The root view used by this view holder.
+         */
+        @NonNull ViewGroup getRoot() {
+            return root;
+        }
     }
 }

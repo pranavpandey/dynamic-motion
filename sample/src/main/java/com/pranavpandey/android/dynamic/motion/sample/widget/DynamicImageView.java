@@ -26,7 +26,7 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.widget.AppCompatImageView;
 
 /**
- * An ImageView to apply color filter according to the supplied parameters.
+ * An {@link AppCompatImageView} to apply color filter according to the supplied parameters.
  */
 public class DynamicImageView extends AppCompatImageView {
 
@@ -39,7 +39,7 @@ public class DynamicImageView extends AppCompatImageView {
     }
 
     public DynamicImageView(@NonNull Context context,
-                            @Nullable AttributeSet attrs, int defStyleAttr) {
+            @Nullable AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
     }
 

@@ -36,6 +36,7 @@ android {
 
 dependencies {
     api "androidx.constraintlayout:constraintlayout:${versions.constraintlayout}"
+    api "androidx.viewpager2:viewpager2:${versions.viewpager2}"
 }
 
 if (project.rootProject.file('local.properties').exists()) {

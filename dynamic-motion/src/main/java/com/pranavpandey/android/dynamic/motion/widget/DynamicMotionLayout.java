@@ -24,14 +24,15 @@ import android.view.LayoutInflater;
 import androidx.annotation.Nullable;
 import androidx.constraintlayout.motion.widget.MotionLayout;
 import androidx.viewpager.widget.ViewPager;
+import androidx.viewpager2.widget.ViewPager2;
 
 import com.pranavpandey.android.dynamic.motion.R;
 import com.pranavpandey.android.dynamic.motion.adapter.ViewPagerAdapter;
 
 /**
- * A MotionLayout to perform operations according to the {@link ViewPager} page offset.
+ * A {@link MotionLayout} to perform operations according to the {@link ViewPager2} page offset.
  */
-public class DynamicMotionLayout extends MotionLayout implements ViewPager.OnPageChangeListener {
+public class DynamicMotionLayout extends MotionLayout {
 
     /**
      * Constant for the unknown page count.
@@ -46,7 +47,7 @@ public class DynamicMotionLayout extends MotionLayout implements ViewPager.OnPag
     /**
      * View pager used by this view.
      */
-    private ViewPager mViewPager;
+    private ViewPager2 mViewPager;
 
     public DynamicMotionLayout(Context context) {
         this(context, null);
@@ -93,17 +94,6 @@ public class DynamicMotionLayout extends MotionLayout implements ViewPager.OnPag
         }
     }
 
-    @Override
-    public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
-        setProgress((position + positionOffset) / (mPageCount - 1));
-    }
-
-    @Override
-    public void onPageSelected(int position) { }
-
-    @Override
-    public void onPageScrollStateChanged(int state) { }
-
     /**
      * Set the page count for the view pager.
      *
@@ -120,12 +110,16 @@ public class DynamicMotionLayout extends MotionLayout implements ViewPager.OnPag
             mViewPager = findViewById(R.id.adm_view_pager);
         }
 
-        mViewPager.setAdapter(new ViewPagerAdapter(getContext(), pageCount));
-        mViewPager.addOnPageChangeListener(this);
+        mViewPager.setAdapter(new ViewPagerAdapter(pageCount));
+        mViewPager.registerOnPageChangeCallback(new ViewPager2.OnPageChangeCallback() {
+            @Override
+            public void onPageScrolled(int position,
+                    float positionOffset, int positionOffsetPixels) {
+                super.onPageScrolled(position, positionOffset, positionOffsetPixels);
 
-        if (onPageChangeListener != null) {
-            mViewPager.addOnPageChangeListener(onPageChangeListener);
-        }
+                setProgress((position + positionOffset) / (mPageCount - 1));
+            }
+        });
 
         if (mViewPager.getAdapter() != null) {
             mViewPager.getAdapter().notifyDataSetChanged();
@@ -146,7 +140,7 @@ public class DynamicMotionLayout extends MotionLayout implements ViewPager.OnPag
      *
      * @return The view pager used by this view.
      */
-    public @Nullable ViewPager getViewPager() {
+    public @Nullable ViewPager2 getViewPager() {
         return mViewPager;
     }
 }
