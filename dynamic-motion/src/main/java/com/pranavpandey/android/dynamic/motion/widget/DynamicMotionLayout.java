@@ -21,12 +21,12 @@ import android.content.res.TypedArray;
 import android.util.AttributeSet;
 import android.view.LayoutInflater;
 
-import com.pranavpandey.android.dynamic.motion.R;
-import com.pranavpandey.android.dynamic.motion.adapter.ViewPagerAdapter;
-
 import androidx.annotation.Nullable;
 import androidx.constraintlayout.motion.widget.MotionLayout;
 import androidx.viewpager.widget.ViewPager;
+
+import com.pranavpandey.android.dynamic.motion.R;
+import com.pranavpandey.android.dynamic.motion.adapter.ViewPagerAdapter;
 
 /**
  * A MotionLayout to perform operations according to the {@link ViewPager} page offset.
@@ -70,10 +70,13 @@ public class DynamicMotionLayout extends MotionLayout implements ViewPager.OnPag
      * @param attrs The supplied attribute set to load the values.
      */
     public void loadFromAttributes(@Nullable AttributeSet attrs) {
-        TypedArray a = getContext().obtainStyledAttributes(attrs, R.styleable.DynamicMotion);
+        TypedArray a = getContext().obtainStyledAttributes(
+                attrs, R.styleable.DynamicMotionLayout);
 
         try {
-            mPageCount = a.getInteger(R.styleable.DynamicMotion_adm_pageCount, ADM_VALUE_UNKNOWN);
+            mPageCount = a.getInteger(
+                    R.styleable.DynamicMotionLayout_adm_pageCount,
+                    ADM_VALUE_UNKNOWN);
         } finally {
             a.recycle();
         }

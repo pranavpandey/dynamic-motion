@@ -17,8 +17,8 @@
 
 <resources>
 
-    <!-- Attributes for this library. -->
-    <declare-styleable name="DynamicMotion">
+    <!-- Attributes for the DynamicMotionLayout. -->
+    <declare-styleable name="DynamicMotionLayout">
         <!-- Page count for the view pager. -->
         <attr name="adm_pageCount" format="integer" />
     </declare-styleable>
