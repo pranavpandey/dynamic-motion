@@ -17,7 +17,7 @@
     catch(err) {
     }
 //-->
-var methods = {"i0":10,"i1":10,"i2":10,"i3":10};
+var methods = {"i0":10,"i1":10,"i2":10};
 var tabs = {65535:["t0","All Methods"],2:["t2","Instance Methods"],8:["t4","Concrete Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -99,7 +99,7 @@ var activeTableTab = "activeTableTab";
 <li><a href="https://developer.android.com/reference/java/lang/Object.html?is-external=true" title="class or interface in java.lang">java.lang.Object</a></li>
 <li>
 <ul class="inheritance">
-<li>PagerAdapter</li>
+<li>&lt;any&gt;</li>
 <li>
 <ul class="inheritance">
 <li>com.pranavpandey.android.dynamic.motion.adapter.ViewPagerAdapter</li>
@@ -114,8 +114,8 @@ var activeTableTab = "activeTableTab";
 <hr>
 <br>
 <pre>public class <span class="typeNameLabel">ViewPagerAdapter</span>
-extends PagerAdapter</pre>
-<div class="block">A PagerAdapter to show different views as pages.
+extends &lt;any&gt;</pre>
+<div class="block">A <code>RecyclerView.Adapter</code> to show different views as pages.
  <p>It will be used internally to add dummy views inside the view pager.</div>
 </li>
 </ul>
@@ -135,8 +135,9 @@ extends PagerAdapter</pre>
 <th class="colOne" scope="col">Constructor and Description</th>
 </tr>
 <tr class="altColor">
-<td class="colOne"><code><span class="memberNameLink"><a href="../../../../../../com/pranavpandey/android/dynamic/motion/adapter/ViewPagerAdapter.html#ViewPagerAdapter-android.content.Context-int-">ViewPagerAdapter</a></span>(<a href="https://developer.android.com/reference/android/content/Context.html?is-external=true" title="class or interface in android.content">Context</a>&nbsp;context,
-                int&nbsp;pages)</code>&nbsp;</td>
+<td class="colOne"><code><span class="memberNameLink"><a href="../../../../../../com/pranavpandey/android/dynamic/motion/adapter/ViewPagerAdapter.html#ViewPagerAdapter-int-">ViewPagerAdapter</a></span>(int&nbsp;pageCount)</code>
+<div class="block">Constructor to initialize an object of this class.</div>
+</td>
 </tr>
 </table>
 </li>
@@ -154,24 +155,18 @@ extends PagerAdapter</pre>
 <th class="colLast" scope="col">Method and Description</th>
 </tr>
 <tr id="i0" class="altColor">
-<td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../com/pranavpandey/android/dynamic/motion/adapter/ViewPagerAdapter.html#destroyItem-android.view.ViewGroup-int-java.lang.Object-">destroyItem</a></span>(<a href="https://developer.android.com/reference/android/view/ViewGroup.html?is-external=true" title="class or interface in android.view">ViewGroup</a>&nbsp;container,
-           int&nbsp;position,
-           <a href="https://developer.android.com/reference/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>&nbsp;object)</code>&nbsp;</td>
+<td class="colFirst"><code>int</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../com/pranavpandey/android/dynamic/motion/adapter/ViewPagerAdapter.html#getItemCount--">getItemCount</a></span>()</code>&nbsp;</td>
 </tr>
 <tr id="i1" class="rowColor">
-<td class="colFirst"><code>int</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../com/pranavpandey/android/dynamic/motion/adapter/ViewPagerAdapter.html#getCount--">getCount</a></span>()</code>&nbsp;</td>
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../com/pranavpandey/android/dynamic/motion/adapter/ViewPagerAdapter.html#onBindViewHolder-com.pranavpandey.android.dynamic.motion.adapter.ViewPagerAdapter.ViewHolder-int-">onBindViewHolder</a></span>(com.pranavpandey.android.dynamic.motion.adapter.ViewPagerAdapter.ViewHolder&nbsp;holder,
+                int&nbsp;position)</code>&nbsp;</td>
 </tr>
 <tr id="i2" class="altColor">
-<td class="colFirst"><code><a href="https://developer.android.com/reference/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../com/pranavpandey/android/dynamic/motion/adapter/ViewPagerAdapter.html#instantiateItem-android.view.ViewGroup-int-">instantiateItem</a></span>(<a href="https://developer.android.com/reference/android/view/ViewGroup.html?is-external=true" title="class or interface in android.view">ViewGroup</a>&nbsp;container,
-               int&nbsp;position)</code>&nbsp;</td>
-</tr>
-<tr id="i3" class="rowColor">
-<td class="colFirst"><code>boolean</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../com/pranavpandey/android/dynamic/motion/adapter/ViewPagerAdapter.html#isViewFromObject-android.view.View-java.lang.Object-">isViewFromObject</a></span>(<a href="https://developer.android.com/reference/android/view/View.html?is-external=true" title="class or interface in android.view">View</a>&nbsp;view,
-                <a href="https://developer.android.com/reference/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>&nbsp;object)</code>&nbsp;</td>
+<td class="colFirst"><code>com.pranavpandey.android.dynamic.motion.adapter.ViewPagerAdapter.ViewHolder</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../com/pranavpandey/android/dynamic/motion/adapter/ViewPagerAdapter.html#onCreateViewHolder-android.view.ViewGroup-int-">onCreateViewHolder</a></span>(<a href="https://developer.android.com/reference/android/view/ViewGroup.html?is-external=true" title="class or interface in android.view">ViewGroup</a>&nbsp;parent,
+                  int&nbsp;viewType)</code>&nbsp;</td>
 </tr>
 </table>
 <ul class="blockList">
@@ -195,14 +190,18 @@ extends PagerAdapter</pre>
 <!--   -->
 </a>
 <h3>Constructor Detail</h3>
-<a name="ViewPagerAdapter-android.content.Context-int-">
+<a name="ViewPagerAdapter-int-">
 <!--   -->
 </a>
 <ul class="blockListLast">
 <li class="blockList">
 <h4>ViewPagerAdapter</h4>
-<pre>public&nbsp;ViewPagerAdapter(<a href="https://developer.android.com/reference/android/content/Context.html?is-external=true" title="class or interface in android.content">Context</a>&nbsp;context,
-                        int&nbsp;pages)</pre>
+<pre>public&nbsp;ViewPagerAdapter(int&nbsp;pageCount)</pre>
+<div class="block">Constructor to initialize an object of this class.</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>pageCount</code> - The item count for this adapter.</dd>
+</dl>
 </li>
 </ul>
 </li>
@@ -213,44 +212,33 @@ extends PagerAdapter</pre>
 <!--   -->
 </a>
 <h3>Method Detail</h3>
-<a name="instantiateItem-android.view.ViewGroup-int-">
+<a name="onCreateViewHolder-android.view.ViewGroup-int-">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
-<h4>instantiateItem</h4>
-<pre>public&nbsp;<a href="https://developer.android.com/reference/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>&nbsp;instantiateItem(<a href="https://developer.android.com/reference/android/view/ViewGroup.html?is-external=true" title="class or interface in android.view">ViewGroup</a>&nbsp;container,
-                              int&nbsp;position)</pre>
+<h4>onCreateViewHolder</h4>
+<pre>public&nbsp;com.pranavpandey.android.dynamic.motion.adapter.ViewPagerAdapter.ViewHolder&nbsp;onCreateViewHolder(<a href="https://developer.android.com/reference/android/view/ViewGroup.html?is-external=true" title="class or interface in android.view">ViewGroup</a>&nbsp;parent,
+                                                                                                      int&nbsp;viewType)</pre>
 </li>
 </ul>
-<a name="getCount--">
+<a name="onBindViewHolder-com.pranavpandey.android.dynamic.motion.adapter.ViewPagerAdapter.ViewHolder-int-">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
-<h4>getCount</h4>
-<pre>public&nbsp;int&nbsp;getCount()</pre>
+<h4>onBindViewHolder</h4>
+<pre>public&nbsp;void&nbsp;onBindViewHolder(com.pranavpandey.android.dynamic.motion.adapter.ViewPagerAdapter.ViewHolder&nbsp;holder,
+                             int&nbsp;position)</pre>
 </li>
 </ul>
-<a name="isViewFromObject-android.view.View-java.lang.Object-">
-<!--   -->
-</a>
-<ul class="blockList">
-<li class="blockList">
-<h4>isViewFromObject</h4>
-<pre>public&nbsp;boolean&nbsp;isViewFromObject(<a href="https://developer.android.com/reference/android/view/View.html?is-external=true" title="class or interface in android.view">View</a>&nbsp;view,
-                                <a href="https://developer.android.com/reference/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>&nbsp;object)</pre>
-</li>
-</ul>
-<a name="destroyItem-android.view.ViewGroup-int-java.lang.Object-">
+<a name="getItemCount--">
 <!--   -->
 </a>
 <ul class="blockListLast">
 <li class="blockList">
-<h4>destroyItem</h4>
-<pre>public&nbsp;void&nbsp;destroyItem(<a href="https://developer.android.com/reference/android/view/ViewGroup.html?is-external=true" title="class or interface in android.view">ViewGroup</a>&nbsp;container,
-                        int&nbsp;position,
-                        <a href="https://developer.android.com/reference/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>&nbsp;object)</pre>
+<h4>getItemCount</h4>
+<pre>public&nbsp;int&nbsp;getItemCount()</pre>
 </li>
 </ul>
 </li>

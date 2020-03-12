@@ -17,7 +17,7 @@
     catch(err) {
     }
 //-->
-var methods = {"i0":10,"i1":10,"i2":10,"i3":10,"i4":10,"i5":10,"i6":10,"i7":10};
+var methods = {"i0":10,"i1":10,"i2":10,"i3":10,"i4":10};
 var tabs = {65535:["t0","All Methods"],2:["t2","Instance Methods"],8:["t4","Concrete Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -115,7 +115,7 @@ var activeTableTab = "activeTableTab";
 <br>
 <pre>public class <span class="typeNameLabel">DynamicMotionLayout</span>
 extends MotionLayout</pre>
-<div class="block">A MotionLayout to perform operations according to the <code>ViewPager</code> page offset.</div>
+<div class="block">A <code>MotionLayout</code> to perform operations according to the <code>ViewPager2</code> page offset.</div>
 </li>
 </ul>
 </div>
@@ -167,7 +167,7 @@ extends MotionLayout</pre>
 </td>
 </tr>
 <tr id="i1" class="rowColor">
-<td class="colFirst"><code>ViewPager</code></td>
+<td class="colFirst"><code>ViewPager2</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../com/pranavpandey/android/dynamic/motion/widget/DynamicMotionLayout.html#getViewPager--">getViewPager</a></span>()</code>
 <div class="block">Get the view pager used by this view.</div>
 </td>
@@ -185,20 +185,6 @@ extends MotionLayout</pre>
 </td>
 </tr>
 <tr id="i4" class="altColor">
-<td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../com/pranavpandey/android/dynamic/motion/widget/DynamicMotionLayout.html#onPageScrolled-int-float-int-">onPageScrolled</a></span>(int&nbsp;position,
-              float&nbsp;positionOffset,
-              int&nbsp;positionOffsetPixels)</code>&nbsp;</td>
-</tr>
-<tr id="i5" class="rowColor">
-<td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../com/pranavpandey/android/dynamic/motion/widget/DynamicMotionLayout.html#onPageScrollStateChanged-int-">onPageScrollStateChanged</a></span>(int&nbsp;state)</code>&nbsp;</td>
-</tr>
-<tr id="i6" class="altColor">
-<td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../com/pranavpandey/android/dynamic/motion/widget/DynamicMotionLayout.html#onPageSelected-int-">onPageSelected</a></span>(int&nbsp;position)</code>&nbsp;</td>
-</tr>
-<tr id="i7" class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../com/pranavpandey/android/dynamic/motion/widget/DynamicMotionLayout.html#setPageCount-int-ViewPager.OnPageChangeListener-">setPageCount</a></span>(int&nbsp;pageCount,
             ViewPager.OnPageChangeListener&nbsp;onPageChangeListener)</code>
@@ -289,35 +275,6 @@ extends MotionLayout</pre>
 <div class="block">Initialize this view by setting the default values.</div>
 </li>
 </ul>
-<a name="onPageScrolled-int-float-int-">
-<!--   -->
-</a>
-<ul class="blockList">
-<li class="blockList">
-<h4>onPageScrolled</h4>
-<pre>public&nbsp;void&nbsp;onPageScrolled(int&nbsp;position,
-                           float&nbsp;positionOffset,
-                           int&nbsp;positionOffsetPixels)</pre>
-</li>
-</ul>
-<a name="onPageSelected-int-">
-<!--   -->
-</a>
-<ul class="blockList">
-<li class="blockList">
-<h4>onPageSelected</h4>
-<pre>public&nbsp;void&nbsp;onPageSelected(int&nbsp;position)</pre>
-</li>
-</ul>
-<a name="onPageScrollStateChanged-int-">
-<!--   -->
-</a>
-<ul class="blockList">
-<li class="blockList">
-<h4>onPageScrollStateChanged</h4>
-<pre>public&nbsp;void&nbsp;onPageScrollStateChanged(int&nbsp;state)</pre>
-</li>
-</ul>
 <a name="setPageCount-int-ViewPager.OnPageChangeListener-">
 <!--   -->
 </a>
@@ -354,7 +311,7 @@ extends MotionLayout</pre>
 <ul class="blockListLast">
 <li class="blockList">
 <h4>getViewPager</h4>
-<pre>public&nbsp;ViewPager&nbsp;getViewPager()</pre>
+<pre>public&nbsp;ViewPager2&nbsp;getViewPager()</pre>
 <div class="block">Get the view pager used by this view.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
