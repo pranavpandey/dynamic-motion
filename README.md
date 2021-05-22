@@ -4,10 +4,10 @@
 
 [![License](https://img.shields.io/badge/license-Apache%202-4EB1BA.svg?)](https://www.apache.org/licenses/LICENSE-2.0.html)
 [![Build Status](https://travis-ci.org/pranavpandey/dynamic-motion.svg?branch=master)](https://travis-ci.org/pranavpandey/dynamic-motion)
-[![Download](https://api.bintray.com/packages/pranavpandey/android/dynamic-motion/images/download.svg)](https://bintray.com/pranavpandey/android/dynamic-motion/_latestVersion)
+[![Release](https://img.shields.io/maven-central/v/com.pranavpandey.android/dynamic-motion)](https://search.maven.org/artifact/com.pranavpandey.android/dynamic-motion)
 
 A library to provide additional functionality for [MotionLayout](https://developer.android.com/reference/android/support/constraint/motion/MotionLayout) 
-on Android 4.3 (API 18) and above devices.
+on Android 4.3 (API 18) and above.
 
 <img src="https://raw.githubusercontent.com/pranavpandey/dynamic-motion/master/graphics/dynamic-motion.gif" width="280" height="486">
 
@@ -112,7 +112,7 @@ Pranav Pandey
 
 ## License
 
-    Copyright 2018-2020 Pranav Pandey
+    Copyright 2018-2021 Pranav Pandey
 
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.
