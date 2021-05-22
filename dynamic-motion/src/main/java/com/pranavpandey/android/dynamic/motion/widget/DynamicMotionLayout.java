@@ -16,6 +16,7 @@
 
 package com.pranavpandey.android.dynamic.motion.widget;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.res.TypedArray;
 import android.util.AttributeSet;
@@ -23,7 +24,6 @@ import android.view.LayoutInflater;
 
 import androidx.annotation.Nullable;
 import androidx.constraintlayout.motion.widget.MotionLayout;
-import androidx.viewpager.widget.ViewPager;
 import androidx.viewpager2.widget.ViewPager2;
 
 import com.pranavpandey.android.dynamic.motion.R;
@@ -98,10 +98,11 @@ public class DynamicMotionLayout extends MotionLayout {
      * Set the page count for the view pager.
      *
      * @param pageCount The page count to be set.
-     * @param onPageChangeListener The page change listener to receive page change events.
+     * @param onPageChangeCallback The callback to receive page change events.
      */
+    @SuppressLint("NotifyDataSetChanged")
     public void setPageCount(int pageCount,
-            @Nullable ViewPager.OnPageChangeListener onPageChangeListener) {
+            @Nullable ViewPager2.OnPageChangeCallback onPageChangeCallback) {
         this.mPageCount = pageCount;
 
         if (mViewPager == null) {
@@ -118,6 +119,29 @@ public class DynamicMotionLayout extends MotionLayout {
                 super.onPageScrolled(position, positionOffset, positionOffsetPixels);
 
                 setProgress((position + positionOffset) / (mPageCount - 1));
+
+                if (onPageChangeCallback != null) {
+                    onPageChangeCallback.onPageScrolled(position,
+                            positionOffset, positionOffsetPixels);
+                }
+            }
+
+            @Override
+            public void onPageSelected(int position) {
+                super.onPageSelected(position);
+
+                if (onPageChangeCallback != null) {
+                    onPageChangeCallback.onPageSelected(position);
+                }
+            }
+
+            @Override
+            public void onPageScrollStateChanged(@ViewPager2.ScrollState int state) {
+                super.onPageScrollStateChanged(state);
+
+                if (onPageChangeCallback != null) {
+                    onPageChangeCallback.onPageScrollStateChanged(state);
+                }
             }
         });
 

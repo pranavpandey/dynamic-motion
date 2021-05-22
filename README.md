@@ -76,7 +76,7 @@ Set page count for `ViewPager` to divide the `transition` between different page
 
 ```java
 // At runtime
-dynamicMotionLayout.setPageCount(int, @Nullable ViewPager.OnPageChangeListener);
+dynamicMotionLayout.setPageCount(int, @Nullable ViewPager2.OnPageChangeCallback);
 ```
 
 ### Motion scene
