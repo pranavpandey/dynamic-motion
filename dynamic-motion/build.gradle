@@ -39,8 +39,8 @@ dependencies {
     api "androidx.viewpager2:viewpager2:${versions.viewpager2}"
 }
 
-if (project.rootProject.file('local.properties').exists()) {
-    apply from: 'bintray.gradle'
+if (project.rootProject.file("${publication}").exists()) {
+    apply from: 'maven.gradle'
 }
 
 task generateJavadoc() {
