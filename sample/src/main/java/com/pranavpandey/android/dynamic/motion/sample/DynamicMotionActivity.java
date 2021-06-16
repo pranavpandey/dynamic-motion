@@ -18,8 +18,6 @@ package com.pranavpandey.android.dynamic.motion.sample;
 
 import android.os.Bundle;
 
-import com.pranavpandey.android.dynamic.R;
-
 import androidx.appcompat.app.AppCompatActivity;
 
 public class DynamicMotionActivity extends AppCompatActivity {
