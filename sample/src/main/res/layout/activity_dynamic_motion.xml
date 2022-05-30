@@ -15,27 +15,38 @@
 	limitations under the License.
 -->
 
-<com.pranavpandey.android.dynamic.motion.widget.DynamicMotionLayout
+<androidx.coordinatorlayout.widget.CoordinatorLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/motion_layout"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    app:layoutDescription="@xml/motion_scene"
-    app:adm_pageCount="4">
+    tools:context="com.pranavpandey.android.dynamic.motion.sample.DynamicMotionActivity">
 
-    <androidx.appcompat.widget.AppCompatImageView
-        android:id="@+id/background"
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_height="wrap_content"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:contentDescription="@null" />
+        android:theme="@style/AppTheme.AppBarOverlay"
+        app:elevation="0dp">
 
-    <com.pranavpandey.android.dynamic.motion.sample.widget.DynamicImageView
-        android:id="@+id/image"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:scaleType="fitCenter"
-        android:contentDescription="@null"
-        app:srcCompat="@drawable/ic_android" />
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/AppTheme.PopupOverlay" />
 
-</com.pranavpandey.android.dynamic.motion.widget.DynamicMotionLayout>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <include layout="@layout/content_dynamic_motion" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="@dimen/fab_margin"
+        android:contentDescription="@string/about"
+        app:srcCompat="@drawable/ic_social_github" />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

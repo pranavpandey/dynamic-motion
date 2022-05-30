@@ -23,15 +23,13 @@
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:theme="@style/AppTheme"
-        android:supportsRtl="true"
-        android:allowBackup="false">
+        android:supportsRtl="true">
 
         <meta-data android:name="android.max_aspect" android:value="2.1" />
 
         <activity
             android:name=".DynamicMotionActivity"
-            android:label="@string/app_name"
-            android:theme="@style/AppTheme"
+            android:theme="@style/AppTheme.NoActionBar"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />

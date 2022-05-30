@@ -20,8 +20,8 @@ buildscript {
             'minSdk'          : 18,
             'targetSdk'       : 32,
             'buildTools'      : '32.0.0',
-            'appcompat'       : '1.3.0',
             'constraintlayout': '2.1.4',
+            'dialogs'         : '4.2.1',
             'kotlin'          : '1.6.20',
             'viewpager2'      : '1.0.0'
     ]

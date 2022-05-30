@@ -18,5 +18,22 @@
 <resources>
 
     <string name="app_name">Dynamic Motion</string>
+    <string name="app_name_sample">Sample</string>
+    <string name="gradle">Gradle dependency</string>
+    <string name="format_version">com.pranavpandey.android:dynamic-motion:%1$s</string>
+
+    <string name="sources">Sources</string>
+    <string name="about">About</string>
+    <string name="about_content"><![CDATA[
+        <b>dynamic-toasts</b><br/>
+        A library to provide additional functionality for Android MotionLayout.<br/><br/>
+        <b>&#169; Pranav Pandey</b><br/><br/>
+        <a href=\'https://pranavpandey.com\'>Website</a>&nbsp;&nbsp;
+        <a href=\'https://github.com/pranavpandey\'>GitHub</a>&nbsp;&nbsp;
+        <a href=\'https://www.linkedin.com/in/pranav-pandey-09032974\'>LinkedIn</a><br/><br/>
+        Please download my other apps via Google Play to support the development.
+    ]]></string>
+    <string name="donate">Donate</string>
+    <string name="more_apps">Google Play</string>
 
 </resources>
