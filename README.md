@@ -9,6 +9,8 @@
 A library to provide additional functionality for [MotionLayout](https://developer.android.com/reference/android/support/constraint/motion/MotionLayout) 
 on Android 4.3 (API 18) and above.
 
+> Since v1.0.0, it is dependent on Java 8.
+
 <img src="https://raw.githubusercontent.com/pranavpandey/dynamic-motion/master/graphics/dynamic-motion.gif" width="280" height="486">
 
 It has `DynamicMotionLayout` which has a built-in `ViewPager` to create parallax effects which will
@@ -33,7 +35,7 @@ It can be installed by adding the following dependency to your `build.gradle` fi
 
 ```groovy
 dependencies {
-    implementation 'com.pranavpandey.android:dynamic-motion:0.5.0'
+    implementation 'com.pranavpandey.android:dynamic-motion:1.0.0'
 }
 ```
 
