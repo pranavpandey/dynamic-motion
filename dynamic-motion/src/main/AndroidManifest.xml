@@ -15,7 +15,4 @@
 	limitations under the License.
 -->
 
-<manifest
-    package="com.pranavpandey.android.dynamic.motion">
-
-</manifest>
+<manifest />
