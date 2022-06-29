@@ -1,4 +1,4 @@
-<img src="https://raw.githubusercontent.com/pranavpandey/dynamic-motion/master/graphics/dynamic-motion.png" width="160" height="160" align="right" hspace="20">
+<img src="./graphics/icon.png" width="160" height="160" align="right" hspace="20">
 
 # Dynamic Motion
 
@@ -11,7 +11,7 @@ on Android 4.3 (API 18) and above.
 
 > Since v1.0.0, it is dependent on Java 8.
 
-<img src="https://raw.githubusercontent.com/pranavpandey/dynamic-motion/master/graphics/dynamic-motion.gif" width="280" height="486">
+<img src="./graphics/preview.gif" width="280" height="486">
 
 It has `DynamicMotionLayout` which has a built-in `ViewPager` to create parallax effects which will
 open a huge set of possibilities for the original `MotionLayout`.
