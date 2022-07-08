@@ -6,8 +6,8 @@
 [![Build Status](https://travis-ci.org/pranavpandey/dynamic-motion.svg?branch=master)](https://travis-ci.org/pranavpandey/dynamic-motion)
 [![Release](https://img.shields.io/maven-central/v/com.pranavpandey.android/dynamic-motion)](https://search.maven.org/artifact/com.pranavpandey.android/dynamic-motion)
 
-A library to provide additional functionality for [MotionLayout](https://developer.android.com/reference/android/support/constraint/motion/MotionLayout) 
-on Android 4.3 (API 18) and above.
+A library to provide additional functionality for [MotionLayout][motion-layout] on 
+Android 4.3 (API 18) and above.
 
 > Since v1.0.0, it is dependent on Java 8.
 
@@ -20,12 +20,12 @@ open a huge set of possibilities for the original `MotionLayout`.
 
 ## Contents
 
-- [Installation](https://github.com/pranavpandey/dynamic-motion#installation)
-- [Usage](https://github.com/pranavpandey/dynamic-motion#usage)
-    - [Replace](https://github.com/pranavpandey/dynamic-motion#replace)
-    - [Page count](https://github.com/pranavpandey/dynamic-motion#page-count)
-    - [Motion scene](https://github.com/pranavpandey/dynamic-motion#motion-scene)
-- [License](https://github.com/pranavpandey/dynamic-motion#license)
+- [Installation](#installation)
+- [Usage](#usage)
+    - [Replace](#replace)
+    - [Page count](#page-count)
+    - [Motion scene](#motion-scene)
+- [License](#license)
 
 ---
 
@@ -44,6 +44,8 @@ dependencies {
 ## Usage
 
 It is divided into 3 simple steps and whole layout can be configured by just using the `xml` files.
+
+> For complete reference, please read the [documentation][documentation].
 
 ### Replace
 
@@ -84,8 +86,7 @@ dynamicMotionLayout.setPageCount(int, @Nullable ViewPager2.OnPageChangeCallback)
 ### Motion scene
 
 Add a motion scene and use `KeyFrameSet` and `KeyAttribute` to animate the views across different
-pages. Please check the [sample](https://github.com/pranavpandey/dynamic-motion/tree/master/sample)
-for a [demo scene](https://github.com/pranavpandey/dynamic-motion/blob/master/sample/src/main/res/xml/motion_scene.xml).
+pages. Please check the [sample][sample] for a [demo scene][demo scene].
 
 ```xml
 <com.pranavpandey.android.dynamic.motion.widget.DynamicMotionLayout
@@ -127,3 +128,9 @@ Pranav Pandey
     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
     See the License for the specific language governing permissions and
     limitations under the License.
+
+
+[documentation]: https://pranavpandey.github.io/dynamic-motion
+[motion-layout]: https://developer.android.com/reference/android/support/constraint/motion/MotionLayout
+[sample]: ./sample
+[demo scene]: ./sample/src/main/res/xml/motion_scene.xml
