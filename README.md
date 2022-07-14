@@ -45,7 +45,7 @@ dependencies {
 
 It is divided into 3 simple steps and whole layout can be configured by just using the `xml` files.
 
-> For complete reference, please read the [documentation][documentation].
+> For a complete reference, please read the [documentation][documentation].
 
 ### Replace
 
