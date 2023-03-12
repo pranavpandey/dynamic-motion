@@ -1,5 +1,5 @@
 /*
- * Copyright 2018-2022 Pranav Pandey
+ * Copyright 2018-2023 Pranav Pandey
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -21,7 +21,7 @@ buildscript {
             'targetSdk'       : 33,
             'buildTools'      : '33.0.2',
             'constraintlayout': '2.1.4',
-            'dialogs'         : '4.3.1',
+            'dialogs'         : '4.3.2',
             'kotlin'          : '1.8.0',
             'viewpager2'      : '1.0.0'
     ]
@@ -69,9 +69,9 @@ ext {
     mavenDir = 'com/pranavpandey/android'
     mavenArtifactId = 'dynamic-motion'
     mavenInceptionYear = 2018
-    mavenVersion = '1.0.1'
-    mavenVersionCode = 7
-    sampleVersionCode = 7
+    mavenVersion = '1.0.2'
+    mavenVersionCode = 8
+    sampleVersionCode = 8
 
     developerId = 'pranavpandey'
     developerName = 'Pranav Pandey'
