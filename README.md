@@ -35,7 +35,7 @@ It can be installed by adding the following dependency to your `build.gradle` fi
 
 ```groovy
 dependencies {
-    implementation 'com.pranavpandey.android:dynamic-motion:1.0.2'
+    implementation 'com.pranavpandey.android:dynamic-motion:1.1.0'
 }
 ```
 

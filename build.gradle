@@ -69,13 +69,13 @@ ext {
     mavenDir = 'com/pranavpandey/android'
     mavenArtifactId = 'dynamic-motion'
     mavenInceptionYear = 2018
-    mavenVersion = '1.0.2'
-    mavenVersionCode = 8
-    sampleVersionCode = 8
+    mavenVersion = '1.1.0'
+    mavenVersionCode = 9
+    sampleVersionCode = 9
 
     developerId = 'pranavpandey'
     developerName = 'Pranav Pandey'
-    developerEmail = 'pranavpande92@gmail.com'
+    developerEmail = 'dynamic@pranavpandey.com'
 
     licenseName = 'The Apache Software License, Version 2.0'
     licenseUrl = 'http://www.apache.org/licenses/LICENSE-2.0.txt'
