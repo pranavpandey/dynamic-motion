@@ -1,1 +1,1 @@
-typeSearchIndex = [{"l":"All Classes","url":"allclasses-index.html"},{"p":"com.pranavpandey.android.dynamic.motion.widget","l":"DynamicMotionLayout"},{"p":"com.pranavpandey.android.dynamic.motion.adapter","l":"ViewPagerAdapter"}]
+typeSearchIndex = [{"l":"All Classes and Interfaces","u":"allclasses-index.html"},{"p":"com.pranavpandey.android.dynamic.motion.widget","l":"DynamicMotionLayout"},{"p":"com.pranavpandey.android.dynamic.motion.adapter","l":"ViewPagerAdapter"}];updateSearchResults();
