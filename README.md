@@ -10,6 +10,7 @@ A library to provide additional functionality for [MotionLayout][motion-layout] 
 Android 4.3 (API 18) and above.
 
 > Since v1.0.0, it is dependent on Java 8.
+<br/>Since v1.1.0, it is targeting Java 17 to provide maximum compatibility.
 
 <img src="./graphics/preview.gif" width="280" height="486">
 
