@@ -11,6 +11,7 @@ Android 4.3 (API 18) and above.
 
 > Since v1.0.0, it is dependent on Java 8.
 <br/>Since v1.1.0, it is targeting Java 17 to provide maximum compatibility.
+<br/>Since v1.2.0, the minimum SDK is Android 4.4 (API 19) to comply with the latest policies.
 
 <img src="./graphics/preview.gif" width="280" height="486">
 
@@ -36,7 +37,7 @@ It can be installed by adding the following dependency to your `build.gradle` fi
 
 ```groovy
 dependencies {
-    implementation 'com.pranavpandey.android:dynamic-motion:1.1.0'
+    implementation 'com.pranavpandey.android:dynamic-motion:1.2.0'
 }
 ```
 

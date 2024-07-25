@@ -38,7 +38,7 @@ buildscript {
 }
 
 plugins {
-    id("io.github.gradle-nexus.publish-plugin") version "1.1.0"
+    id("io.github.gradle-nexus.publish-plugin") version "2.0.0"
 }
 
 allprojects {
@@ -69,9 +69,9 @@ ext {
     mavenDir = 'com/pranavpandey/android'
     mavenArtifactId = 'dynamic-motion'
     mavenInceptionYear = 2018
-    mavenVersion = '1.1.0'
-    mavenVersionCode = 9
-    sampleVersionCode = 9
+    mavenVersion = '1.2.0'
+    mavenVersionCode = 10
+    sampleVersionCode = 10
 
     developerId = 'pranavpandey'
     developerName = 'Pranav Pandey'
