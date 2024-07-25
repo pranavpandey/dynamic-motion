@@ -21,9 +21,9 @@ buildscript {
             'targetSdk'       : 35,
             'buildTools'      : '35.0.0',
             'constraintlayout': '2.1.4',
-            'dialogs'         : '4.4.1',
+            'dialogs'         : '4.5.0',
             'kotlin'          : '1.9.24',
-            'viewpager2'      : '1.0.0'
+            'viewpager2'      : '1.1.0'
     ]
 
     repositories {
