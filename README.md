@@ -1,4 +1,4 @@
-<img src="./graphics/icon.png" width="160" height="160" align="right" hspace="20">
+<img src="./graphics/icon.png" height="160">
 
 # Dynamic Motion
 
@@ -6,17 +6,16 @@
 [![Build Status](https://travis-ci.org/pranavpandey/dynamic-motion.svg?branch=master)](https://travis-ci.org/pranavpandey/dynamic-motion)
 [![Release](https://img.shields.io/maven-central/v/com.pranavpandey.android/dynamic-motion)](https://search.maven.org/artifact/com.pranavpandey.android/dynamic-motion)
 
-A library to provide additional functionality for [MotionLayout][motion-layout] on 
-Android 4.3 (API 18) and above.
+**A library to provide additional functionality for [MotionLayout][motion-layout] on 
+Android 4.3 (API 18) and above. It has `DynamicMotionLayout` which has a built-in `ViewPager` to create 
+parallax effects that opens a huge set of possibilities for the original `MotionLayout`.**
 
+> [!IMPORTANT]
 > Since v1.0.0, it is dependent on Java 8.
 <br/>Since v1.1.0, it is targeting Java 17 to provide maximum compatibility.
 <br/>Since v1.2.0, the minimum SDK is Android 4.4 (API 19) to comply with the latest policies.
 
 <img src="./graphics/preview.gif" width="280" height="486">
-
-It has `DynamicMotionLayout` which has a built-in `ViewPager` to create parallax effects which will
-open a huge set of possibilities for the original `MotionLayout`.
 
 ---
 
